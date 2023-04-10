@@ -46,7 +46,7 @@ namespace Catalog.API.Controllers
                 bool isSaved = _productManager.Add(product);
                 if (isSaved)
                 {
-                    return CustomResult("Product Created Successfully!", product, HttpStatusCode.Created);
+                    return CustomResult("Product Save Successfully!", product, HttpStatusCode.Created);
                 }
                 else
                 {
@@ -71,8 +71,8 @@ namespace Catalog.API.Controllers
                     return CustomResult("Data Not Found!", HttpStatusCode.NotFound);
                 }
 
-                bool isSaved = _productManager.Update(product.Id, product);
-                if (isSaved)
+                bool isUpdate = _productManager.Update(product.Id, product);
+                if (isUpdate)
                 {
                     return CustomResult("Product Updated Successfully!", product, HttpStatusCode.OK);
                 }
