@@ -83,7 +83,6 @@ namespace Catalog.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return CustomResult(ex.Message, HttpStatusCode.BadRequest);
             }
         }
